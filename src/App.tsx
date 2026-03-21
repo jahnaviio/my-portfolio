@@ -139,12 +139,12 @@ const Hero = () => {
         >
           <div className="relative">
             <div className="absolute -inset-4 bg-neon-blue/20 rounded-full blur-2xl animate-pulse"></div>
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-neon-blue p-2 relative z-10">
-              <img 
-                <img src={myphoto} alt="profile" />
-                className="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                referrerPolicy="no-referrer"
-              />
+          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-neon-blue p-2 relative z-10">
+           <img 
+             src={myphoto} 
+               alt="profile"
+                className="w-full h-full rounded-full object-cover"  
+                  />
             </div>
           </div>
         </motion.div>
