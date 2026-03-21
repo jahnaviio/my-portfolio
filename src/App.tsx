@@ -141,7 +141,7 @@ const Hero = () => {
             <div className="absolute -inset-4 bg-neon-blue/20 rounded-full blur-2xl animate-pulse"></div>
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-neon-blue p-2 relative z-10">
               <img 
-                src="https://picsum.photos/seed/jahnavi/400/400" 
+                src="https://drive.google.com/file/d/1sHqUOi1JbZ6y-XzG6RPhhabwGK25FczM/view?usp=drivesdk" 
                 alt="Duggapu Jahnavi" 
                 className="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 referrerPolicy="no-referrer"
