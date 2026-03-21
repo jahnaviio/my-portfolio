@@ -181,7 +181,7 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 mb-10">
-            <a href="#contact" className="btn-neon-filled">Hire Me</a>
+            <a href="#contact" className="btn-neon-filled">Open to Opportunities</a>
             <a href="#contact" className="btn-neon">Contact Me</a>
           </div>
 
