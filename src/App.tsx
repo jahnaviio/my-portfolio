@@ -143,7 +143,7 @@ const Hero = () => {
            <img 
              src={myphoto} 
                alt="profile"
-                className="w-full h-full rounded-full object-cover object-top scale-80"
+                className="w-full h-full rounded-full object-cover object-top scale-100"
                   />
             </div>
           </div>
