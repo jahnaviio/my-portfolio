@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --color-neon-blue: #00f2ff;
+  --color-dark-navy: #0a0b1e;
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-dark-navy text-white font-poppins overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-glass-bg backdrop-blur-lg border border-glass-border rounded-2xl transition-all duration-300;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+  }
+  
+  .neon-text {
+    @apply text-neon-blue;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+  }
+
+  .btn-neon {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-navy hover:shadow-[0_0_20px_rgba(0,242,255,0.6)];
+  }
+
+  .btn-neon-filled {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 bg-neon-blue text-dark-navy shadow-[0_0_15px_rgba(0,242,255,0.4)] hover:shadow-[0_0_25px_rgba(0,242,255,0.7)] hover:scale-105;
+  }
+}
+
+/* Custom background shapes */
+.bg-glow-1 {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(0, 242, 255, 0.15) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(80px);
+}
+
+.bg-glow-2 {
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(0, 100, 255, 0.1) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(100px);
+}
