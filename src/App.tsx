@@ -74,7 +74,7 @@ const Navbar = () => {
             </a>
           ))}
           <a 
-            href="https://drive.google.com/file/d/1XQWMptDhiXAKzlfVKWaemQlOUSrEUs_9/view" 
+            href="https://drive.google.com/file/d/1na03pHAcbLpT-xDXDbt7p2l4xOHATTfh/view?usp=sharing"
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-neon text-xs py-2 px-5 flex items-center gap-2"
@@ -112,7 +112,7 @@ const Navbar = () => {
               </a>
             ))}
             <a 
-              href="https://drive.google.com/file/d/1XQWMptDhiXAKzlfVKWaemQlOUSrEUs_9/view" 
+              href="https://drive.google.com/file/d/1na03pHAcbLpT-xDXDbt7p2l4xOHATTfh/view?usp=sharing"
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-neon text-center flex items-center justify-center gap-2"
@@ -258,7 +258,7 @@ const About = () => {
             solutions while growing as a future AI professional.
           </p>
           <a 
-            href="https://drive.google.com/file/d/1XQWMptDhiXAKzlfVKWaemQlOUSrEUs_9/view" 
+            href="https://drive.google.com/file/d/1na03pHAcbLpT-xDXDbt7p2l4xOHATTfh/view?usp=sharing"
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-neon-filled inline-flex items-center gap-2"
