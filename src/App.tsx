@@ -112,7 +112,7 @@ const Navbar = () => {
               </a>
             ))}
             <a 
-              href="https://drive.google.com/file/d/1hH1lpj7_bqlD8Tf5TiZxIsmrasbAWkl5/view?usp=sharing?usp=sharing"
+              href="https://drive.google.com/file/d/1hH1lpj7_bqlD8Tf5TiZxIsmrasbAWkl5/view?usp=sharing"
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-neon text-center flex items-center justify-center gap-2"
@@ -258,7 +258,7 @@ const About = () => {
             solutions while growing as a future AI professional.
           </p>
           <a 
-            href="https://drive.google.com/file/d/1hH1lpj7_bqlD8Tf5TiZxIsmrasbAWkl5/view?usp=sharing?usp=sharing"
+            href="https://drive.google.com/file/d/1hH1lpj7_bqlD8Tf5TiZxIsmrasbAWkl5/view?usp=sharing"
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-neon-filled inline-flex items-center gap-2"
