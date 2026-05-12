@@ -74,7 +74,7 @@ const Navbar = () => {
             </a>
           ))}
           <a 
-            href="https://drive.google.com/file/d/1hH1lpj7_bqlD8Tf5TiZxIsmrasbAWkl5/view?usp=sharing?usp=sharing"
+            href="https://drive.google.com/file/d/1O_F6vYt7cZ_q5scI7ZkREBGee8LWY_sf/view?usp=sharing"
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-neon text-xs py-2 px-5 flex items-center gap-2"
@@ -112,7 +112,7 @@ const Navbar = () => {
               </a>
             ))}
             <a 
-              href="https://drive.google.com/file/d/1hH1lpj7_bqlD8Tf5TiZxIsmrasbAWkl5/view?usp=sharing"
+              href="https://drive.google.com/file/d/1O_F6vYt7cZ_q5scI7ZkREBGee8LWY_sf/view?usp=sharing"
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-neon text-center flex items-center justify-center gap-2"
@@ -492,14 +492,47 @@ const projects = [
 
 const Achievements = () => {
   const achievements = [
-    "Smart India Hackathon Participant",
-    "Supersus Hackathon Participant",
-    "AI Agents Intensive Course (Google)",
-    "Data Engineering Virtual Internship (AICTE, EduSkills, AWS)",
-    "Infosys Certification",
-    "Cisco Networking/Cybersecurity Certification",
-    "Prompt Engineering Certifications"
-  ];
+  {
+    title: "Smart India Hackathon Participant"
+    
+  },
+  {
+    title: "Supersus Hackathon Participant"
+    
+  },
+  {
+    title: "AI Agents Intensive Course (Google)",
+    link: "https://www.kaggle.com/certification/badges/duggapujahnavi/105",
+  },
+  {
+    title: "Data Engineering Virtual Internship (AICTE, EduSkills, AWS)",
+    link: "https://drive.google.com/file/d/1NbQmZYBpTzObXYFAjskhV8oN3VAYwAQn/view?usp=sharing",
+  },
+  {
+    title: "Infosys Prompt Engineering Certification",
+    link: "https://drive.google.com/file/d/1kVAxIxCxjW-VVUlCMIermlztxc5huwyG/view?usp=sharing",
+  },
+  {
+    title: "Cisco Networking Certification",
+    link: "https://drive.google.com/file/d/18FnVUBPLm6vn8bhBWny8Am63uWe1RXs4/view?usp=sharing",
+  },
+  {
+    title: "Prompt Engineering Internship - Future Interns",
+    link: "https://drive.google.com/file/d/1CaRmJlXujZjR-StmMMuLq4ACBzkWkuXX/view",
+  },
+  {
+    title: "GenAI Powered Data Analytics Job Simulation - Tata",
+    link: "https://drive.google.com/file/d/12yS8MGmEycwpD_QIiuGihULADeHgGhhM/view",
+  },
+     {
+    title: "IBM Developer skills Network",
+    link: "https://drive.google.com/file/d/1NdSJOY2bLf_NBeqFBkHzgAkutjOyqm25/view?usp=sharing",
+  },
+     {
+    title: "Infosys Introduction to Natural Language Processing Certification",
+    link: "https://drive.google.com/file/d/1Y0A2bTZg8xSfM6YCp1fiaaH175QETcq6/view?usp=sharing",
+  },
+];
 
   return (
     <section className="py-20 px-6 bg-black/20">
