@@ -368,6 +368,12 @@ const Services = () => {
       title: 'Basic UI Design',
       desc: 'Designing simple, user-friendly and clean interfaces.',
       icon: <Layout size={32} />
+    },
+    {
+  title: "AI Agents & LLM Integration",
+  description:
+    "Building AI-powered assistants using LLMs, APIs, and automation workflows to create smart, interactive user experiences.",
+  icon: BrainCircuit,
     }
   ];
 
@@ -406,12 +412,34 @@ const Services = () => {
   );
 };
 
-const Portfolio = () => {
-  const projects = [
-    { title: 'AI Project Coming Soon', type: 'AI / GenAI' },
-    { title: 'Web Project Coming Soon', type: 'Web Development' },
-    { title: 'Data Project Coming Soon', type: 'Data Analysis' },
-  ];
+const projects = [
+  {
+    category: "LLM / AI",
+    title: "Local AI Chatbot using Ollama",
+    description:
+      "Developed a local AI chatbot using Ollama and open-source LLMs for private, fast, and offline conversational AI experiences.",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    category: "AI AGENTS",
+    title: "AI Agent Inbox Environment",
+    description:
+      "Developed a deployable AI agent environment with API-based task execution, Docker deployment, and Hugging Face integration.",
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop",
+  },
+
+  {
+    category: "AI / WEB APP",
+    title: "AI Resume Analyzer & Job Recommender",
+    description:
+      "Created an intelligent resume analysis system that evaluates resumes and recommends relevant job roles based on skills and experience.",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+  },
+];
 
   return (
     <section id="portfolio" className="py-20 px-6">
