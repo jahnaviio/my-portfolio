@@ -426,7 +426,7 @@ const Portfolio = () => {
       description:
         'Developed a local AI chatbot using Ollama and open-source LLMs for private, fast, and offline conversational AI experiences.',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
-      link: 'https://github.com/jahnaviio',
+      link: 'http://192.168.1.5:8501/',
     },
     {
       category: 'AI Agents',
@@ -434,16 +434,16 @@ const Portfolio = () => {
       description:
         'Developed a deployable AI agent environment with API-based task execution, Docker deployment, and Hugging Face integration.',
       image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop',
-      link: 'https://huggingface.co/spaces/Jahnavii0/ai-inbox-env',
+      link: 'https://huggingface.co/spaces/Jahnaviio/ai-inbox-env/tree/main',
     },
-    {
-      category: 'AI / Web App',
-      title: 'AI Resume Analyzer & Job Recommender',
-      description:
-        'Created an intelligent resume analysis system that evaluates resumes and recommends relevant job roles based on skills and experience.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop',
-      link: 'https://github.com/jahnaviio',
-    },
+   {
+  category: 'AI / COMPUTER VISION',
+  title: 'AI Vision Studio',
+  description:
+    'Built AI-powered vision tools using image processing and intelligent analysis techniques for practical real-world applications.',
+  image: 'https://images.unsplash.com/photo-1526378800651-c1a163d9f7b8?q=80&w=1200&auto=format&fit=crop',
+  link: 'https://jahnaviio-ai-vision-studio.hf.space/',
+},
   ];
 
   return (
@@ -530,7 +530,7 @@ const Achievements = () => {
       link: 'https://drive.google.com/file/d/1CaRmJlXujZjR-StmMMuLq4ACBzkWkuXX/view',
     },
     {
-      title: 'GenAI Powered Data Analytics Job Simulation - Tata / Forage',
+      title: 'GenAI Powered Data Analytics Job Simulation - Tata',
       link: 'https://drive.google.com/file/d/12yS8MGmEycwpD_QIiuGihULADeHgGhhM/view',
     },
     {
