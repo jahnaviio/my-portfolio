@@ -441,7 +441,7 @@ const Portfolio = () => {
   title: 'AI Vision Studio',
   description:
     'Built AI-powered vision tools using image processing and intelligent analysis techniques for practical real-world applications.',
-  image: 'https://images.unsplash.com/photo-1526378800651-c1a163d9f7b8?q=80&w=1200&auto=format&fit=crop',
+  image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop',
   link: 'https://jahnaviio-ai-vision-studio.hf.space/',
 },
   ];
