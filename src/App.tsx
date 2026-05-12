@@ -6,28 +6,25 @@ import myphoto from './myphoto.jpeg';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Typewriter from 'typewriter-effect';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  ExternalLink, 
-  Code2, 
-  Cpu, 
-  Globe, 
-  Layout, 
-  Search, 
-  Award, 
-  ChevronRight, 
-  Download, 
-  Menu, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Cpu,
+  Globe,
+  Layout,
+  Search,
+  Award,
+  ChevronRight,
+  Download,
+  Menu,
   X,
   Phone,
   MessageSquare,
   Terminal,
   Database,
-  Layers,
   Wrench,
-  BrainCircuit
+  BrainCircuit,
 } from 'lucide-react';
 import { cn } from './lib/utils';
 
@@ -53,29 +50,33 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={cn(
-      "fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 py-4",
-      isScrolled ? "bg-dark-navy/80 backdrop-blur-md border-b border-glass-border py-3" : "bg-transparent"
-    )}>
+    <nav
+      className={cn(
+        'fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 py-4',
+        isScrolled
+          ? 'bg-dark-navy/80 backdrop-blur-md border-b border-glass-border py-3'
+          : 'bg-transparent'
+      )}
+    >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold neon-text tracking-tighter">
           Portfolio
         </a>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               className="text-sm font-medium hover:text-neon-blue transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <a 
+
+          <a
             href="https://drive.google.com/file/d/1O_F6vYt7cZ_q5scI7ZkREBGee8LWY_sf/view?usp=sharing"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
             className="btn-neon text-xs py-2 px-5 flex items-center gap-2"
           >
@@ -83,8 +84,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -92,28 +92,28 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 w-full bg-dark-navy border-b border-glass-border p-6 flex flex-col gap-4 md:hidden"
           >
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
+              <a
+                key={link.name}
+                href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-lg font-medium hover:text-neon-blue"
               >
                 {link.name}
               </a>
             ))}
-            <a 
+
+            <a
               href="https://drive.google.com/file/d/1O_F6vYt7cZ_q5scI7ZkREBGee8LWY_sf/view?usp=sharing"
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               className="btn-neon text-center flex items-center justify-center gap-2"
             >
@@ -130,7 +130,7 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -139,17 +139,17 @@ const Hero = () => {
         >
           <div className="relative">
             <div className="absolute -inset-4 bg-neon-blue/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-neon-blue p-2 relative z-10">
-           <img 
-             src={myphoto} 
-               alt="profile"
-               className="w-full h-full rounded-full object-cover object-[50%_30%]"
-                  />
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-neon-blue p-2 relative z-10">
+              <img
+                src={myphoto}
+                alt="profile"
+                className="w-full h-full rounded-full object-cover object-[50%_30%]"
+              />
             </div>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -159,36 +159,37 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight whitespace-nowrap">
             Duggapu Jahnavi
           </h1>
+
           <div className="text-xl md:text-2xl text-gray-400 mb-6 h-12">
             <Typewriter
               options={{
-                strings: [
-                  'AI Developer', 
-                  'Data Analyst', 
-                  'Web Developer', 
-                  'Generative AI Enthusiast'
-                ],
+                strings: ['AI Developer', 'Data Analyst', 'Web Developer', 'Generative AI Enthusiast'],
                 autoStart: true,
                 loop: true,
-                wrapperClassName: "neon-text font-semibold"
+                wrapperClassName: 'neon-text font-semibold',
               }}
             />
           </div>
+
           <p className="text-gray-400 max-w-lg mb-8 leading-relaxed">
-            Aspiring AI Developer exploring Generative AI and building impactful solutions. 
+            Aspiring AI Developer exploring Generative AI and building impactful solutions.
             Driven by curiosity for innovation and emerging applications.
           </p>
-          
+
           <div className="flex flex-wrap gap-4 mb-10">
-            <a href="#contact" className="btn-neon-filled">Open to Opportunities</a>
-            <a href="#contact" className="btn-neon">Contact Me</a>
+            <a href="#contact" className="btn-neon-filled">
+              Open to Opportunities
+            </a>
+            <a href="#contact" className="btn-neon">
+              Contact Me
+            </a>
           </div>
 
           <div className="flex gap-5">
             {[
-              { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/duggapu-jahnavi-957a74379" },
-              { icon: <Github size={20} />, href: "https://github.com/jahnaviio" },
-              { icon: <Mail size={20} />, href: "mailto:jahnaviduggapu1901@gmail.com" }
+              { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/duggapu-jahnavi-957a74379' },
+              { icon: <Github size={20} />, href: 'https://github.com/jahnaviio' },
+              { icon: <Mail size={20} />, href: 'mailto:jahnaviduggapu1901@gmail.com' },
             ].map((social, i) => (
               <motion.a
                 key={i}
@@ -211,7 +212,7 @@ const Hero = () => {
 const Stats = () => {
   const stats = [
     { label: 'Experience', value: 'Fresher' },
-    { label: 'Projects (Learning)', value: '3+' },
+    { label: 'Projects', value: '3+' },
     { label: 'Technologies Explored', value: '10+' },
     { label: 'Hackathons', value: '2+' },
   ];
@@ -220,7 +221,7 @@ const Stats = () => {
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -251,15 +252,17 @@ const About = () => {
         >
           <h2 className="text-neon-blue font-semibold mb-2 uppercase tracking-widest">About Me</h2>
           <h3 className="text-3xl font-bold mb-6">AI Enthusiast & Developer</h3>
+
           <p className="text-gray-400 leading-relaxed mb-8 text-lg">
-            Driven by curiosity for AI and innovation, I specialize in generative AI, basic programming, 
-            and emerging applications in farm engineering. With hands-on internship experience and 
-            strong communication skills, I focus on building creative, efficient, and impactful 
-            solutions while growing as a future AI professional.
+            Driven by curiosity for AI and innovation, I specialize in generative AI, basic programming,
+            and emerging applications. With hands-on internship experience and strong communication
+            skills, I focus on building creative, efficient, and impactful solutions while growing as a
+            future AI professional.
           </p>
-          <a 
+
+          <a
             href="https://drive.google.com/file/d/1hH1lpj7_bqlD8Tf5TiZxIsmrasbAWkl5/view?usp=sharing"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
             className="btn-neon-filled inline-flex items-center gap-2"
           >
@@ -276,28 +279,28 @@ const Skills = () => {
     {
       title: 'Frontend',
       icon: <Layout className="text-neon-blue" />,
-      skills: ['HTML', 'CSS', 'Responsive Design']
+      skills: ['HTML', 'CSS', 'Responsive Design'],
     },
     {
-      title: 'Backend (Basic)',
+      title: 'Backend',
       icon: <Database className="text-neon-blue" />,
-      skills: ['APIs Understanding', 'Server-side Concepts']
+      skills: ['APIs', 'Server-side Concepts', 'Flask Basics'],
     },
     {
       title: 'Programming',
       icon: <Terminal className="text-neon-blue" />,
-      skills: ['Python', 'Java', 'C']
+      skills: ['Python', 'Java', 'C'],
     },
     {
       title: 'Tools & Platforms',
       icon: <Wrench className="text-neon-blue" />,
-      skills: ['GitHub', 'VS Code', 'Google Colab', 'ChatGPT', 'Jupyter Notebook', 'Canva']
+      skills: ['GitHub', 'VS Code', 'Google Colab', 'ChatGPT', 'Jupyter Notebook', 'Canva'],
     },
     {
       title: 'AI & Technologies',
       icon: <BrainCircuit className="text-neon-blue" />,
-      skills: ['Generative AI', 'Machine Learning (Basics)', 'Prompt Engineering', 'NLP Basics', 'AI Tools Usage']
-    }
+      skills: ['Generative AI', 'Machine Learning Basics', 'Prompt Engineering', 'NLP Basics', 'LLMs'],
+    },
   ];
 
   return (
@@ -310,7 +313,7 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((cat, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -324,10 +327,11 @@ const Skills = () => {
                 </div>
                 <h4 className="text-xl font-bold">{cat.title}</h4>
               </div>
+
               <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill, j) => (
-                  <span 
-                    key={j} 
+                  <span
+                    key={j}
                     className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:border-neon-blue/50 hover:text-neon-blue transition-all"
                   >
                     {skill}
@@ -347,34 +351,33 @@ const Services = () => {
     {
       title: 'AI Exploration & Integration',
       desc: 'Working with AI tools and Generative AI to explore practical use cases and build simple intelligent solutions.',
-      icon: <Cpu size={32} />
+      icon: <Cpu size={32} />,
     },
     {
       title: 'Basic Web Development',
       desc: 'Creating responsive web pages using HTML and CSS with clean UI design.',
-      icon: <Globe size={32} />
+      icon: <Globe size={32} />,
     },
     {
       title: 'Prompt Engineering',
       desc: 'Designing optimized prompts for better AI outputs across use cases.',
-      icon: <MessageSquare size={32} />
+      icon: <MessageSquare size={32} />,
     },
     {
       title: 'Research & Problem Solving',
       desc: 'Analyzing problems and finding AI-driven innovative solutions.',
-      icon: <Search size={32} />
+      icon: <Search size={32} />,
     },
     {
       title: 'Basic UI Design',
       desc: 'Designing simple, user-friendly and clean interfaces.',
-      icon: <Layout size={32} />
+      icon: <Layout size={32} />,
     },
     {
-  title: "AI Agents & LLM Integration",
-  description:
-    "Building AI-powered assistants using LLMs, APIs, and automation workflows to create smart, interactive user experiences.",
-  icon: BrainCircuit,
-    }
+      title: 'AI Agents & LLM Integration',
+      desc: 'Building AI-powered assistants using LLMs, APIs, and automation workflows to create smart, interactive user experiences.',
+      icon: <BrainCircuit size={32} />,
+    },
   ];
 
   return (
@@ -387,7 +390,7 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -396,11 +399,14 @@ const Services = () => {
               className="glass-card p-10 group hover:border-neon-blue relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-neon-blue/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-neon-blue/10 transition-colors"></div>
+
               <div className="text-neon-blue mb-6 group-hover:scale-110 transition-transform inline-block">
                 {service.icon}
               </div>
+
               <h4 className="text-2xl font-bold mb-4">{service.title}</h4>
               <p className="text-gray-400 mb-8 leading-relaxed">{service.desc}</p>
+
               <button className="flex items-center gap-2 text-neon-blue font-medium group-hover:gap-4 transition-all">
                 Read More <ChevronRight size={18} />
               </button>
@@ -412,34 +418,33 @@ const Services = () => {
   );
 };
 
-const projects = [
-  {
-    category: "LLM / AI",
-    title: "Local AI Chatbot using Ollama",
-    description:
-      "Developed a local AI chatbot using Ollama and open-source LLMs for private, fast, and offline conversational AI experiences.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    category: "AI AGENTS",
-    title: "AI Agent Inbox Environment",
-    description:
-      "Developed a deployable AI agent environment with API-based task execution, Docker deployment, and Hugging Face integration.",
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    category: "AI / WEB APP",
-    title: "AI Resume Analyzer & Job Recommender",
-    description:
-      "Created an intelligent resume analysis system that evaluates resumes and recommends relevant job roles based on skills and experience.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+const Portfolio = () => {
+  const projects = [
+    {
+      category: 'LLM / AI',
+      title: 'Local AI Chatbot using Ollama',
+      description:
+        'Developed a local AI chatbot using Ollama and open-source LLMs for private, fast, and offline conversational AI experiences.',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://github.com/jahnaviio',
+    },
+    {
+      category: 'AI Agents',
+      title: 'AI Agent Inbox Environment',
+      description:
+        'Developed a deployable AI agent environment with API-based task execution, Docker deployment, and Hugging Face integration.',
+      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://huggingface.co/spaces/Jahnavii0/ai-inbox-env',
+    },
+    {
+      category: 'AI / Web App',
+      title: 'AI Resume Analyzer & Job Recommender',
+      description:
+        'Created an intelligent resume analysis system that evaluates resumes and recommends relevant job roles based on skills and experience.',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://github.com/jahnaviio',
+    },
+  ];
 
   return (
     <section id="portfolio" className="py-20 px-6">
@@ -451,7 +456,7 @@ const projects = [
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -460,27 +465,31 @@ const projects = [
               className="glass-card group overflow-hidden"
             >
               <div className="h-48 bg-white/5 relative overflow-hidden">
-                <img 
-                  src={`https://picsum.photos/seed/project${i}/600/400`} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-110 transition-all duration-500"
                   referrerPolicy="no-referrer"
                 />
+
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-dark-navy/60 backdrop-blur-sm">
-                   <a 
-                    href="https://github.com/jahnaviio" 
-                    target="_blank" 
+                  <a
+                    href={project.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="btn-neon text-sm"
                   >
-                    View GitHub
+                    View Project
                   </a>
                 </div>
               </div>
+
               <div className="p-6">
-                <span className="text-xs text-neon-blue font-semibold uppercase tracking-wider">{project.type}</span>
+                <span className="text-xs text-neon-blue font-semibold uppercase tracking-wider">
+                  {project.category}
+                </span>
                 <h4 className="text-xl font-bold mt-2 mb-3">{project.title}</h4>
-                <p className="text-gray-400 text-sm mb-4">Currently working on exciting projects. Stay tuned!</p>
+                <p className="text-gray-400 text-sm mb-4">{project.description}</p>
               </div>
             </motion.div>
           ))}
@@ -492,50 +501,50 @@ const projects = [
 
 const Achievements = () => {
   const achievements = [
-  {
-    title: "Smart India Hackathon Participant"
-    
-  },
-  {
-    title: "Supersus Hackathon Participant"
-    
-  },
-  {
-    title: "AI Agents Intensive Course (Google)",
-    link: "https://www.kaggle.com/certification/badges/duggapujahnavi/105",
-  },
-  {
-    title: "Data Engineering Virtual Internship (AICTE, EduSkills, AWS)",
-    link: "https://drive.google.com/file/d/1NbQmZYBpTzObXYFAjskhV8oN3VAYwAQn/view?usp=sharing",
-  },
-  {
-    title: "Infosys Prompt Engineering Certification",
-    link: "https://drive.google.com/file/d/1kVAxIxCxjW-VVUlCMIermlztxc5huwyG/view?usp=sharing",
-  },
-  {
-    title: "Cisco Networking Certification",
-    link: "https://drive.google.com/file/d/18FnVUBPLm6vn8bhBWny8Am63uWe1RXs4/view?usp=sharing",
-  },
-  {
-    title: "Prompt Engineering Internship - Future Interns",
-    link: "https://drive.google.com/file/d/1CaRmJlXujZjR-StmMMuLq4ACBzkWkuXX/view",
-  },
-  {
-    title: "GenAI Powered Data Analytics Job Simulation - Tata",
-    link: "https://drive.google.com/file/d/12yS8MGmEycwpD_QIiuGihULADeHgGhhM/view",
-  },
-     {
-    title: "IBM Developer skills Network",
-    link: "https://drive.google.com/file/d/1NdSJOY2bLf_NBeqFBkHzgAkutjOyqm25/view?usp=sharing",
-  },
-     {
-    title: "Infosys Introduction to Natural Language Processing Certification",
-    link: "https://drive.google.com/file/d/1Y0A2bTZg8xSfM6YCp1fiaaH175QETcq6/view?usp=sharing",
-  },
-];
+    {
+      title: 'Smart India Hackathon Participant',
+      link: '',
+    },
+    {
+      title: 'Supersus Hackathon Participant',
+      link: '',
+    },
+    {
+      title: 'AI Agents Intensive Course (Google)',
+      link: 'https://www.kaggle.com/certification/badges/duggapujahnavi/105',
+    },
+    {
+      title: 'Data Engineering Virtual Internship (AICTE, EduSkills, AWS)',
+      link: 'https://drive.google.com/file/d/1NbQmZYBpTzObXYFAjskhV8oN3VAYwAQn/view?usp=sharing',
+    },
+    {
+      title: 'Infosys Prompt Engineering Certification',
+      link: 'https://drive.google.com/file/d/1kVAxIxCxjW-VVUlCMIermlztxc5huwyG/view?usp=sharing',
+    },
+    {
+      title: 'Cisco Networking Certification',
+      link: 'https://drive.google.com/file/d/18FnVUBPLm6vn8bhBWny8Am63uWe1RXs4/view?usp=sharing',
+    },
+    {
+      title: 'Prompt Engineering Internship - Future Interns',
+      link: 'https://drive.google.com/file/d/1CaRmJlXujZjR-StmMMuLq4ACBzkWkuXX/view',
+    },
+    {
+      title: 'GenAI Powered Data Analytics Job Simulation - Tata / Forage',
+      link: 'https://drive.google.com/file/d/12yS8MGmEycwpD_QIiuGihULADeHgGhhM/view',
+    },
+    {
+      title: 'IBM Developer Skills Network',
+      link: 'https://drive.google.com/file/d/1NdSJOY2bLf_NBeqFBkHzgAkutjOyqm25/view?usp=sharing',
+    },
+    {
+      title: 'Infosys Introduction to Natural Language Processing Certification',
+      link: 'https://drive.google.com/file/d/1Y0A2bTZg8xSfM6YCp1fiaaH175QETcq6/view?usp=sharing',
+    },
+  ];
 
   return (
-    <section className="py-20 px-6 bg-black/20">
+    <section id="achievements" className="py-20 px-6 bg-black/20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-neon-blue font-semibold mb-2 uppercase tracking-widest">Milestones</h2>
@@ -544,8 +553,11 @@ const Achievements = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((item, i) => (
-            <motion.div 
+            <motion.a
               key={i}
+              href={item.link || '#achievements'}
+              target={item.link ? '_blank' : '_self'}
+              rel="noopener noreferrer"
               initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.05 }}
@@ -555,8 +567,9 @@ const Achievements = () => {
               <div className="w-12 h-12 rounded-lg bg-neon-blue/10 flex items-center justify-center text-neon-blue group-hover:bg-neon-blue group-hover:text-dark-navy transition-all">
                 <Award size={24} />
               </div>
-              <p className="font-medium text-gray-200">{item}</p>
-            </motion.div>
+
+              <p className="font-medium text-gray-200">{item.title}</p>
+            </motion.a>
           ))}
         </div>
       </div>
@@ -567,13 +580,17 @@ const Achievements = () => {
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const formData = new FormData(e.currentTarget);
     const name = formData.get('name');
     const email = formData.get('email');
     const subject = formData.get('subject');
     const message = formData.get('message');
-    
-    const mailtoUrl = `mailto:jahnaviduggapu1901@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
+    const mailtoUrl = `mailto:jahnaviduggapu1901@gmail.com?subject=${encodeURIComponent(
+      subject as string
+    )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
     window.location.href = mailtoUrl;
   };
 
@@ -596,22 +613,52 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-400">Name</label>
-                  <input name="name" type="text" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all" placeholder="Your Name" />
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all"
+                    placeholder="Your Name"
+                  />
                 </div>
+
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-400">Email</label>
-                  <input name="email" type="email" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all" placeholder="Your Email" />
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all"
+                    placeholder="Your Email"
+                  />
                 </div>
               </div>
+
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-400">Subject</label>
-                <input name="subject" type="text" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all" placeholder="Subject" />
+                <input
+                  name="subject"
+                  type="text"
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all"
+                  placeholder="Subject"
+                />
               </div>
+
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-400">Message</label>
-                <textarea name="message" rows={5} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all resize-none" placeholder="Your Message"></textarea>
+                <textarea
+                  name="message"
+                  rows={5}
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-neon-blue outline-none transition-all resize-none"
+                  placeholder="Your Message"
+                ></textarea>
               </div>
-              <button type="submit" className="btn-neon-filled w-full py-4 text-lg">Send Message</button>
+
+              <button type="submit" className="btn-neon-filled w-full py-4 text-lg">
+                Send Message
+              </button>
             </form>
           </motion.div>
 
@@ -622,21 +669,42 @@ const Contact = () => {
             className="flex flex-col justify-center gap-8"
           >
             {[
-              { icon: <Mail />, title: "Email", value: "jahnaviduggapu1901@gmail.com", href: "mailto:jahnaviduggapu1901@gmail.com" },
-              { icon: <Phone />, title: "Phone", value: "9848135669", href: "tel:9848135669" },
-              { icon: <Linkedin />, title: "LinkedIn", value: "duggapu-jahnavi", href: "https://www.linkedin.com/in/duggapu-jahnavi-957a74379" },
-              { icon: <Github />, title: "GitHub", value: "jahnaviio", href: "https://github.com/jahnaviio" },
+              {
+                icon: <Mail />,
+                title: 'Email',
+                value: 'jahnaviduggapu1901@gmail.com',
+                href: 'mailto:jahnaviduggapu1901@gmail.com',
+              },
+              {
+                icon: <Phone />,
+                title: 'Phone',
+                value: '9848135669',
+                href: 'tel:9848135669',
+              },
+              {
+                icon: <Linkedin />,
+                title: 'LinkedIn',
+                value: 'duggapu-jahnavi',
+                href: 'https://www.linkedin.com/in/duggapu-jahnavi-957a74379',
+              },
+              {
+                icon: <Github />,
+                title: 'GitHub',
+                value: 'jahnaviio',
+                href: 'https://github.com/jahnaviio',
+              },
             ].map((contact, i) => (
-              <a 
-                key={i} 
-                href={contact.href} 
-                target="_blank" 
+              <a
+                key={i}
+                href={contact.href}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="glass-card p-6 flex items-center gap-6 hover:border-neon-blue/50 group"
               >
                 <div className="w-14 h-14 rounded-full bg-neon-blue/10 flex items-center justify-center text-neon-blue group-hover:bg-neon-blue group-hover:text-dark-navy transition-all">
                   {contact.icon}
                 </div>
+
                 <div>
                   <h5 className="text-sm text-gray-400">{contact.title}</h5>
                   <p className="text-lg font-semibold text-gray-200">{contact.value}</p>
@@ -663,9 +731,9 @@ const Footer = () => {
 
         <div className="flex gap-6">
           {[
-            { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/duggapu-jahnavi-957a74379" },
-            { icon: <Github size={20} />, href: "https://github.com/jahnaviio" },
-            { icon: <Mail size={20} />, href: "mailto:jahnaviduggapu1901@gmail.com" }
+            { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/duggapu-jahnavi-957a74379' },
+            { icon: <Github size={20} />, href: 'https://github.com/jahnaviio' },
+            { icon: <Mail size={20} />, href: 'mailto:jahnaviduggapu1901@gmail.com' },
           ].map((social, i) => (
             <a
               key={i}
@@ -688,12 +756,11 @@ const Footer = () => {
 export default function App() {
   return (
     <div className="relative min-h-screen">
-      {/* Background Effects */}
       <div className="bg-glow-1"></div>
       <div className="bg-glow-2"></div>
-      
+
       <Navbar />
-      
+
       <main>
         <Hero />
         <Stats />
