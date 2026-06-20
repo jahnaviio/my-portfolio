@@ -212,7 +212,7 @@ const Hero = () => {
 const Stats = () => {
   const stats = [
     { label: 'Experience', value: 'Fresher' },
-    { label: 'Projects', value: '3+' },
+    { label: 'Projects', value: '10+' },
     { label: 'Technologies Explored', value: '10+' },
     { label: 'Hackathons', value: '2+' },
   ];
